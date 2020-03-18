@@ -3,6 +3,7 @@ FROM continuumio/miniconda3
 ADD VERSION .
 
 RUN conda config --add channels defaults && \
+    conda config --add channels conda-forge && \
     conda config --add channels r
 
 RUN conda update -n base -c defaults conda
